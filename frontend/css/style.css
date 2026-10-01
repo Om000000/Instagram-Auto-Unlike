@@ -1,0 +1,8 @@
+body { background: #f5f6fa; color: #20232a; }
+.eyebrow { color: #6c63ff; font-size: .72rem; font-weight: 700; letter-spacing: .14em; }
+.stat-card, .panel { background: #fff; border: 1px solid #eceef3; border-radius: 16px; padding: 1.25rem; }
+.stat-card { min-height: 112px; display: flex; flex-direction: column; justify-content: space-between; }
+.stat-card span { color: #737987; font-size: .85rem; }
+.stat-card strong { font-size: 1.8rem; }
+.table thead th { color: #737987; font-size: .78rem; font-weight: 600; }
+.post-title { max-width: 260px; overflow-wrap: anywhere; }

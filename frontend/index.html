@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InstaUnlike Manager</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<main class="container py-5">
+  <header class="mb-4">
+    <div class="eyebrow">PERSONAL ACCOUNT TOOL</div>
+    <h1 class="fw-bold">InstaUnlike Manager</h1>
+    <p class="text-secondary">Import, review and manage your liked-post records.</p>
+  </header>
+  <section class="row g-3 mb-4">
+    <div class="col-6 col-lg-3"><div class="stat-card"><span>Total posts</span><strong id="total">—</strong></div></div>
+    <div class="col-6 col-lg-3"><div class="stat-card"><span>Pending</span><strong id="pending">—</strong></div></div>
+    <div class="col-6 col-lg-3"><div class="stat-card"><span>Confirmed unliked</span><strong id="unliked">—</strong></div></div>
+    <div class="col-6 col-lg-3"><div class="stat-card"><span>Skipped</span><strong id="skipped">—</strong></div></div>
+  </section>
+  <section class="panel mb-4">
+    <h2 class="h5">Import Instagram data</h2>
+    <p class="text-secondary small">Upload the JSON file from your Instagram information export. Your Instagram password is not needed.</p>
+    <form id="importForm" class="d-flex flex-wrap gap-2">
+      <input class="form-control" type="file" name="file" accept=".json,application/json" required>
+      <button class="btn btn-dark" type="submit">Import likes</button>
+    </form>
+    <div id="importMessage" class="small mt-3" role="status"></div>
+  </section>
+  <section class="panel">
+    <div class="d-flex justify-content-between align-items-center gap-2 mb-3">
+      <div><h2 class="h5 mb-1">Recent liked posts</h2><p class="text-secondary small mb-0">Latest imported records</p></div>
+      <button id="refreshButton" class="btn btn-outline-secondary btn-sm">Refresh</button>
+    </div>
+    <div class="table-responsive">
+      <table class="table align-middle">
+        <thead><tr><th>Post</th><th>Liked at</th><th>Status</th><th></th></tr></thead>
+        <tbody id="postsBody"><tr><td colspan="4" class="text-secondary">Loading…</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+  <footer class="small text-secondary mt-4">Actions are not automated. Open a post and perform the unlike action on Instagram yourself; only then should its status be recorded as confirmed.</footer>
+</main>
+<script src="/js/app.js"></script>
+</body>
+</html>
