@@ -1,0 +1,10 @@
+body { background: #f6f7f9; color: #16181d; }
+.eyebrow { font-size:.75rem; letter-spacing:.12em; font-weight:700; color:#6c757d; }
+.stat-card,.panel { background:#fff; border:1px solid #e7e9ee; border-radius:16px; padding:20px; box-shadow:0 4px 18px rgba(0,0,0,.035); }
+.stat-card { height:100%; } .stat-card span { display:block; color:#6c757d; font-size:.85rem; } .stat-card strong { font-size:1.8rem; }
+.review-card { border:1px solid #e7e9ee; border-radius:14px; padding:24px; background:#fbfcfe; }
+.caption { white-space:pre-wrap; color:#343a40; max-height:220px; overflow:auto; }
+.url-box { background:#f0f2f5; border-radius:10px; padding:10px 12px; font-size:.8rem; word-break:break-all; color:#59616d; }
+.empty-state { padding:40px 10px; text-align:center; color:#6c757d; }
+.post-title { max-width:460px; word-break:break-word; }
+code { color:inherit; }
