@@ -58,7 +58,8 @@ async function refresh() {
 
 $("importForm").addEventListener("submit", async event => {
   event.preventDefault();
-  const formData = new FormData(event.currentTarget);
+  const form = event.currentTarget;
+  const formData = new FormData(form);
   $("importMessage").textContent = "Importing…";
   try {
     const response = await fetch("/api/import", { method: "POST", body: formData });
@@ -66,7 +67,7 @@ $("importForm").addEventListener("submit", async event => {
     if (!response.ok) throw new Error(result.error || "Import failed");
     $("importMessage").textContent =
       `Found ${result.found}; imported ${result.imported}; already present ${result.duplicates_or_existing}.`;
-    event.currentTarget.reset();
+    form.reset();
     await refresh();
   } catch (error) {
     $("importMessage").textContent = error.message;
